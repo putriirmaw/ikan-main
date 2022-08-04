@@ -9,6 +9,7 @@ import 'package:tflite/tflite.dart';
 // import 'package:flutter_test/flutter_test.dart';
 // import 'package:tflite_flutter/tflite_flutter.dart';
 import 'dart:io';
+import 'package:fish/ListPage.dart';
 
 // import 'package:skripsifishh/Camera.dart';
 
@@ -276,6 +277,18 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
                 icon: Icon(Icons.camera)),
             label: 'Camera',
+          ),
+          BottomNavigationBarItem(
+            icon: IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MyHomePage()),
+                );
+              },
+              icon: Icon(Icons.article_outlined),
+            ),
+            label: 'List',
           ),
           BottomNavigationBarItem(
             icon: IconButton(
