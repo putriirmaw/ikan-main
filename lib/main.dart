@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 // import 'package:image_picker/image_picker.dart';
 import 'package:fish/Home.dart';
 
+import 'DetailProduct.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -15,6 +17,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: HomeScreen(),
+      routes: {
+        ProductDetailScreen.routeName: (context) => ProductDetailScreen()
+      },
       // title: 'Flutter Demo',
       // theme: ThemeData(
       //   // This is the theme of your application.
