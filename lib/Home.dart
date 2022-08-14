@@ -26,6 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
   late File image;
   List<dynamic>? _output;
   bool isImageloaded = false;
+  String _conf = "";
 
   Future pickImage() async {
     try {
@@ -83,6 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
     print(output);
     setState(() {
       _output = output;
+      _conf = (_output![0]['confidence'] * 100.0).toString().substring(0, 2) + "%";
     });
   }
 
